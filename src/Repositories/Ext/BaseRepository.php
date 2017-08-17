@@ -27,7 +27,7 @@ class BaseRepository {
 	}
 
 	public function __call( $name, $arguments ) {
-		$this->extendInformation[ $this->messageType ][ $name ] = $arguments;
+		$this->extendInformation[ $this->messageType ][ $name ] = count( $arguments ) === 1 ? $arguments[0] : $arguments;
 
 		return $this;
 	}
@@ -52,6 +52,6 @@ class BaseRepository {
 		$data = curl_exec( $ch );
 		curl_close( $ch );
 
-		return $data;
+		return json_decode( $data, true );
 	}
 }

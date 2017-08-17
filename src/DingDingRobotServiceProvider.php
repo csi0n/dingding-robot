@@ -23,7 +23,7 @@ class DingDingRobotServiceProvider extends ServiceProvider {
 	 * @return void
 	 */
 	public function register() {
-		$this->app['DingDingRobot'] = $this->app->singleton( 'DingDingRobot', function ( $app ) {
+		$this->app->singleton( 'DingDingRobot', function ( $app ) {
 			return new Application( config( 'dingding-robot' ) );
 		} );
 	}
