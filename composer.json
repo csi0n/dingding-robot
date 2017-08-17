@@ -1,0 +1,17 @@
+{
+    "name": "csi0n/dingding-robot",
+    "description": "dingding,robot,webhook",
+    "minimum-stability": "dev",
+    "authors": [{
+        "name": "csi0n",
+        "email": "chqssqll@gmail.com"
+    }],
+    "require": {
+        "pimple/pimple": "^3.2@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "csi0n\\DingDingRobot\\": "src/"
+        }
+    }
+}
